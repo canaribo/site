@@ -1,5 +1,5 @@
 ---
-title: On AI from one Software Dev Perspective
+title: On AI from one Software Dev's Perspective
 date: 2026-05-12
 ---
 
