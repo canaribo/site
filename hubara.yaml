@@ -1,0 +1,6 @@
+title: my blog
+description: a minimal, no-nonsense blog
+author: me
+baseURL: https://example.com
+favicon: 🦤
+about: i write about things

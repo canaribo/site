@@ -1,0 +1,32 @@
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: download latest hubara
+        run: |
+          latest=$(curl -s https://api.github.com/repos/canaribo/hubara/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "downloading hubara $latest"
+          curl -sL "https://github.com/canaribo/hubara/releases/download/${latest}/hubara-linux-amd64" -o hubara
+          chmod +x hubara
+
+      - name: build site
+        run: ./hubara
+
+      - name: install vercel
+        run: npm install -g vercel
+
+      - name: deploy to vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel deploy public/ --prod --token "$VERCEL_TOKEN"
