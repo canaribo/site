@@ -1,6 +1,6 @@
 # site
 
-a [hubara](https://github.com/canaribo/hubara) site.
+my [hubara](https://github.com/canaribo/hubara) site.
 
 ## structure
 
