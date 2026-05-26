@@ -2,6 +2,35 @@
  *  phosphor — terminal, retro, minimal
  */
 
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
+}
+
 @keyframes wave {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -10,7 +39,7 @@
 
 :root {
   --width: 80ch;
-  --font-body: "Atkinson Hyperlegible Next", system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "Cascadia Code", "Fira Code", monospace;
 
   --bg:            #0f0f0f;

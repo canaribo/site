@@ -4,3 +4,6 @@ author: Pablo Pérez
 baseURL: https://canaribo.com
 favicon: 🐤
 about: Backend Engineer. Born and living in Tenerife, Canary Islands, Spain.
+extraHead: |
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin>
+
